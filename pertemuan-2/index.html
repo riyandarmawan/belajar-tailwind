@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        spacing: {
+                            13: "3.25rem",
+                        },
+                        fontFamily: {
+                            inter: ["Inter"],
+                        },
+                        colors: {
+                            apa: "#123321",
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <style type="text/tailwindcss"></style>
+    </head>
+    <body>
+        <h1 class="text-8xl font-bold text-center my-10">
+            Belajar <span class="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">TailwindCSS</span>
+        </h1>
+
+        <section class="mb-10 bg-gradient-to-t from-yellow-200 via-blue-500 to-green-400">
+            <h2 class="text-3xl text-center">Spacing</h2>
+            <div class="m-13">Margin</div>
+            <div class="py-8">Padding</div>
+        </section>
+
+        <section class="mb-10 bg-green-200">
+            <h2 class="text-3xl text-center">Sizing</h2>
+            <div class="w-32 h-32 bg-apa">Kotak 1</div>
+        </section>
+
+        <section class="font-inter max-w-3xl mx-auto text-justify">
+            <h2 class="mb-2 text-3xl font-bold">
+                Belajar Mengenai Typography pada TailwindCSS
+            </h2>
+            <div class="mb-4 text-xl text-gray-500">
+                By
+                <a href="#" class="text-gray-700 font-semibold"
+                    >Sandhika Galih</a
+                >, 1 Januari 2022
+            </div>
+            <p class="mb-4">
+                Lorem ipsum
+                <a href="#" class="underline font-semibold text-blue-700"
+                    >dolor sit amet</a
+                >
+                consectetur adipisicing elit. Magni doloremque vero nihil, iure
+                expedita perspiciatis beatae corrupti rerum voluptas tenetur
+                libero labore cum voluptate quo sint quae vitae qui dolorum
+                exercitationem eveniet aliquid vel soluta quaerat perferendis!
+                Alias aspernatur tempore consequatur odit minus quod facilis,
+                natus illo temporibus sapiente itaque!
+            </p>
+            <blockquote class="mb-4 text-xl italic font-thin">
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                nulla provident iusto eos ullam cumque, facilis inventore velit
+                vitae excepturi!"
+            </blockquote>
+            <p class="mb-4">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+                nisi vel cumque porro! Voluptate nisi distinctio non,
+                dignissimos deleniti exercitationem fuga consequatur dolore
+                delectus quibusdam dolorum! Praesentium ullam cum alias.
+            </p>
+        </section>
+
+        <div class="max-w-xl h-96 bg-[#baca12] mx-auto mt-[42px] overflow-y-scroll bg-fixed" style="background-image: url('https://source.unsplash.com/1000x600?white');">
+            <p class="p-5 text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquid, beatae architecto vitae tempore autem obcaecati iure consectetur dolor praesentium quas nesciunt consequuntur, minima deleniti magnam commodi libero. Explicabo hic repellendus reprehenderit sed? Quae quidem distinctio impedit odit. Facere nam tenetur voluptatem quod deleniti quae iste adipisci corrupti nemo, atque, aliquam quo commodi dicta a consequatur necessitatibus molestias architecto provident totam porro quisquam autem assumenda numquam? Culpa autem blanditiis laudantium ducimus neque nesciunt molestias recusandae tenetur repellat, velit aut inventore eveniet officiis quas, et magni sunt quod at consequatur sequi. Sint, beatae molestias? Tenetur, libero ea sed assumenda at quod voluptas iste perferendis nulla. Cumque provident doloremque, consequatur aut cum sed? Corporis a harum accusantium deserunt cum sit illo quaerat nisi facere iure repellendus dolor aperiam atque culpa cumque minus quas corrupti velit minima, libero ea autem? Doloribus est aspernatur illo et corrupti obcaecati saepe cum ipsa perspiciatis placeat temporibus molestias nesciunt cupiditate, quisquam veniam exercitationem vitae at voluptates debitis consequuntur eaque. Magni porro distinctio expedita molestias, doloremque facilis mollitia deserunt provident qui hic fuga velit excepturi labore sint impedit sit, dolorum nobis nisi reprehenderit iure delectus? Qui culpa adipisci obcaecati? Enim qui esse eum placeat et eaque ut ratione!</p>
+        </div>
+
+        <div class="mt-32 max-w-[350px] h-[200px] bg-slate-300 mx-auto bg-no-repeat bg-center rounded-2xl shadow-2xl shadow-slate-600 bg-cover overflow-hidden border-8 flex" style="background-image: url(./img/image.jpg);">
+            <div class="w-[150px] h-[150px] bg-white/30 m-auto backdrop-blur-sm rounded-full"></div>
+        </div>
+        
+        <div class="mb-96"></div>
+    </body>
+</html>
