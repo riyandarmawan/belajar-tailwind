@@ -13,6 +13,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
+                darkMode: "class",
                 theme: {
                     extend: {
                         spacing: {
@@ -29,14 +30,24 @@
             };
         </script>
 
-        <style type="text/tailwindcss"></style>
+        <style type="text/tailwindcss">
+            #toggle:checked ~ label div.toggle-circle {
+                @apply translate-x-3;
+            }
+        </style>
     </head>
-    <body>
+    <body class="dark:bg-slate-800 dark:text-slate-200">
         <h1 class="text-8xl font-bold text-center my-10">
-            Belajar <span class="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">TailwindCSS</span>
+            Belajar
+            <span
+                class="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent"
+                >TailwindCSS</span
+            >
         </h1>
 
-        <section class="mb-10 bg-gradient-to-t from-yellow-200 via-blue-500 to-green-400">
+        <section
+            class="mb-10 bg-gradient-to-t from-yellow-200 via-blue-500 to-green-400"
+        >
             <h2 class="text-3xl text-center">Spacing</h2>
             <div class="m-13">Margin</div>
             <div class="py-8">Padding</div>
@@ -82,14 +93,124 @@
             </p>
         </section>
 
-        <div class="max-w-xl h-96 bg-[#baca12] mx-auto mt-[42px] overflow-y-scroll bg-fixed" style="background-image: url('https://source.unsplash.com/1000x600?white');">
-            <p class="p-5 text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquid, beatae architecto vitae tempore autem obcaecati iure consectetur dolor praesentium quas nesciunt consequuntur, minima deleniti magnam commodi libero. Explicabo hic repellendus reprehenderit sed? Quae quidem distinctio impedit odit. Facere nam tenetur voluptatem quod deleniti quae iste adipisci corrupti nemo, atque, aliquam quo commodi dicta a consequatur necessitatibus molestias architecto provident totam porro quisquam autem assumenda numquam? Culpa autem blanditiis laudantium ducimus neque nesciunt molestias recusandae tenetur repellat, velit aut inventore eveniet officiis quas, et magni sunt quod at consequatur sequi. Sint, beatae molestias? Tenetur, libero ea sed assumenda at quod voluptas iste perferendis nulla. Cumque provident doloremque, consequatur aut cum sed? Corporis a harum accusantium deserunt cum sit illo quaerat nisi facere iure repellendus dolor aperiam atque culpa cumque minus quas corrupti velit minima, libero ea autem? Doloribus est aspernatur illo et corrupti obcaecati saepe cum ipsa perspiciatis placeat temporibus molestias nesciunt cupiditate, quisquam veniam exercitationem vitae at voluptates debitis consequuntur eaque. Magni porro distinctio expedita molestias, doloremque facilis mollitia deserunt provident qui hic fuga velit excepturi labore sint impedit sit, dolorum nobis nisi reprehenderit iure delectus? Qui culpa adipisci obcaecati? Enim qui esse eum placeat et eaque ut ratione!</p>
+        <div
+            class="max-w-xl h-96 bg-[#baca12] mx-auto mt-[42px] overflow-y-scroll bg-fixed"
+            style="
+                background-image: url('https://source.unsplash.com/1000x600?white');
+            "
+        >
+            <p class="p-5 text-2xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                aliquid, beatae architecto vitae tempore autem obcaecati iure
+                consectetur dolor praesentium quas nesciunt consequuntur, minima
+                deleniti magnam commodi libero. Explicabo hic repellendus
+                reprehenderit sed? Quae quidem distinctio impedit odit. Facere
+                nam tenetur voluptatem quod deleniti quae iste adipisci corrupti
+                nemo, atque, aliquam quo commodi dicta a consequatur
+                necessitatibus molestias architecto provident totam porro
+                quisquam autem assumenda numquam? Culpa autem blanditiis
+                laudantium ducimus neque nesciunt molestias recusandae tenetur
+                repellat, velit aut inventore eveniet officiis quas, et magni
+                sunt quod at consequatur sequi. Sint, beatae molestias? Tenetur,
+                libero ea sed assumenda at quod voluptas iste perferendis nulla.
+                Cumque provident doloremque, consequatur aut cum sed? Corporis a
+                harum accusantium deserunt cum sit illo quaerat nisi facere iure
+                repellendus dolor aperiam atque culpa cumque minus quas corrupti
+                velit minima, libero ea autem? Doloribus est aspernatur illo et
+                corrupti obcaecati saepe cum ipsa perspiciatis placeat
+                temporibus molestias nesciunt cupiditate, quisquam veniam
+                exercitationem vitae at voluptates debitis consequuntur eaque.
+                Magni porro distinctio expedita molestias, doloremque facilis
+                mollitia deserunt provident qui hic fuga velit excepturi labore
+                sint impedit sit, dolorum nobis nisi reprehenderit iure
+                delectus? Qui culpa adipisci obcaecati? Enim qui esse eum
+                placeat et eaque ut ratione!
+            </p>
         </div>
 
-        <div class="mt-32 max-w-[350px] h-[200px] bg-slate-300 mx-auto bg-no-repeat bg-center rounded-2xl shadow-2xl shadow-slate-600 bg-cover overflow-hidden border-8 flex" style="background-image: url(./img/image.jpg);">
-            <div class="w-[150px] h-[150px] bg-white/30 m-auto backdrop-blur-sm rounded-full"></div>
+        <div
+            class="mt-32 max-w-[350px] h-[200px] bg-slate-300 mx-auto bg-no-repeat bg-center rounded-2xl shadow-2xl shadow-slate-600 bg-cover overflow-hidden border-8 flex"
+            style="background-image: url(./img/image.jpg)"
+        >
+            <div
+                class="w-[150px] h-[150px] bg-white/30 m-auto backdrop-blur-sm rounded-full"
+            ></div>
         </div>
-        
+
+        <hr class="my-20" />
+
+        <div class="flex justify-center items-center">
+            <span class="text-sm text-slate-500 mr-2 dark:text-slate-300"">Light</span>
+            <input type="checkbox" id="toggle" class="hidden">
+            <label for="toggle">
+                <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-0.5 cursor-pointer">
+                    <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+                </div>
+            </label>
+            <span class="text-sm text-slate-500 ml-2 dark:text-slate-300">Dark</span>
+        </div>
+
+        <button
+            class="my-20 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto shadow-2xl shadow-slate-900 hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:bg-slate-100"
+        >
+            Simpan
+        </button>
+
+        <div
+            class="max-w-md my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow font-inter hover:bg-sky-500 group font-serif dark:hover:bg-slate-300"
+        >
+            <h5
+                class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800"
+            >
+                My Card
+            </h5>
+            <p
+                class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-700 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800"
+            >
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Possimus magni obcaecati ipsam maiores libero dolorem itaque
+                reiciendis, laboriosam ea provident sapiente exercitationem
+                omnis inventore culpa nisi commodi. Aut, expedita veniam?
+            </p>
+        </div>
+
+        <div
+            class="max-w-md border border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5 my-3"
+        >
+            <form action="">
+                <label for="email">
+                    <span
+                        class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5"
+                        >Email</span
+                    >
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Masukkan email anda"
+                        class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
+                    />
+                    <p
+                        class="text-sm m-1 text-pink-700 invisible peer-invalid:visible"
+                    >
+                        Email tidak valid
+                    </p>
+                </label>
+            </form>
+        </div>
+
         <div class="mb-96"></div>
+
+        <script>
+            // document.getElementById('toggle').onclick = () => {
+            //     document.getElementsByTagName('html').classlist.add('dark')
+            // }
+
+            const checkbox = document.querySelector('#toggle');
+            const html = document.querySelector('html');
+
+            checkbox.addEventListener('click', function () {
+                checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+            })
+        </script>
     </body>
 </html>
